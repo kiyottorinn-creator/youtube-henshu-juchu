@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>預かったチャンネルの編集を、納品セットにするまで（見本）</title>
+<style>
+:root{--bg:#0f1420;--card:#1a2130;--line:#2b3550;--ink:#eef2fa;--dim:#a9b4c9;--key:#ffd166;--ok:#5ad19a;--ng:#ff7b7b;--q:#8fb8ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.75}
+header{padding:34px 20px 24px;background:linear-gradient(180deg,#151c2b,#0f1420);border-bottom:1px solid #26304a}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+h1{font-size:26px;margin:0 0 10px;letter-spacing:.01em}
+h2{font-size:20px;margin:40px 0 8px;padding-left:11px;border-left:5px solid var(--key)}
+h3{font-size:16px;margin:22px 0 6px;color:var(--key)}
+p,li{font-size:15px;color:#dde4f2}
+.dim{color:var(--dim);font-size:13.5px}
+.card{background:var(--card);border:1px solid #2b3550;border-radius:12px;padding:16px;margin:14px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+video{width:100%;border-radius:9px;background:#000;display:block}
+.tate video{max-width:250px;margin:0 auto}
+pre{white-space:pre-wrap;word-break:break-word;background:#0b0f18;border:1px solid #223;border-radius:9px;padding:12px;font-size:12.5px;color:#cfe0ff;max-height:340px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+textarea{width:100%;min-height:150px;background:#0b0f18;color:#cfe0ff;border:1px solid #2b3550;border-radius:9px;padding:11px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px}
+button{background:var(--key);color:#1a1405;border:0;border-radius:9px;padding:11px 18px;font-weight:700;font-size:14.5px;cursor:pointer;margin:6px 6px 6px 0}
+button.sub{background:#2b3550;color:var(--ink)}
+input[type=number]{background:#0b0f18;color:var(--ink);border:1px solid #2b3550;border-radius:7px;padding:7px 9px;width:104px;font-size:14px}
+label{display:inline-block;font-size:13.5px;color:var(--dim);margin:6px 14px 6px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{border:1px solid #2b3550;padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#202a3e;color:var(--key);white-space:nowrap}
+.ng{color:var(--ng)}.ok{color:var(--ok)}.q{color:var(--q)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid #3a4666;color:var(--dim);margin-right:6px}
+footer{margin:52px 0 30px;padding-top:18px;border-top:1px solid #26304a;color:var(--dim);font-size:13px}
+.note{background:#1d2436;border-left:4px solid var(--q);padding:11px 13px;border-radius:0 8px 8px 0;font-size:13.5px;color:#cfd8ec;margin:12px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>預かったチャンネルの編集を、納品セットにするまで（見本）</h1>
+<p class="dim">案件ごとに設定と辞書を分けて編集を通し、納品前に機械で点検して、渡すフォルダを組むところまでの見本です。
+下の「点検」と「見積もり」はこのページの中だけで動きます。貼った内容はどこにも送りません。</p>
+<p class="dim"><span class="tag">見本は架空の2社</span><span class="tag">音声は読み上げ・実写ではありません</span><span class="tag">外部通信なし</span></p>
+</div></header>
+
+<div class="wrap">
+
+<h2>1. 渡したもの（架空のクライアント2社・各1本）</h2>
+<p>左が預かったまま、右が納品した本編です。無音を詰めて、字幕を入れて、BGMの音量を声の間だけ下げています。</p>
+<div class="grid">
+  <div class="card"><h3>預かったまま（みなと会計・3分42秒）</h3>
+    <video controls preload="none" poster="media/moto_minato.jpg" src="media/moto_minato.mp4"></video>
+    <p class="dim">文と文のあいだに、合計60.3秒の間があります。</p></div>
+  <div class="card"><h3>納品した本編（2分50秒・字幕77枚）</h3>
+    <video controls preload="none" poster="media/honpen_minato.jpg" src="media/honpen_minato.mp4"></video>
+    <p class="dim">34か所で無音を詰めました。仕上がりの音量は -14.5 LUFS。</p></div>
+</div>
+<div class="grid">
+  <div class="card tate"><h3>同じ素材から作った縦型（40秒・全部見せる形）</h3>
+    <video controls preload="none" poster="media/tate_minato.jpg" src="media/tate_minato.mp4"></video></div>
+  <div class="card tate"><h3>別の案件の縦型（35秒・中央を切り抜く形）</h3>
+    <video controls preload="none" poster="media/tate_aoba.jpg" src="media/tate_aoba.mp4"></video>
+    <p class="dim">あおば整体院。字幕の1枚の文字数も、この案件だけ短くしてあります。</p></div>
+</div>
+<div class="card"><h3>もう1社の本編（あおば整体院・1分56秒）</h3>
+  <video controls preload="none" poster="media/honpen_aoba.jpg" src="media/honpen_aoba.mp4"></video>
+  <p class="dim">この案件は、書き出した音量が目標に届かず -16.0 LUFS で止まりました。音だけ作り直して -14.0 にしています。</p></div>
+
+<h2>2. 納品フォルダに入っていたもの</h2>
+<p>クライアントに渡すのは、本編・縦型・字幕ファイル・点検の結果・納品書の5点です。点検の結果と納品書は、機械が作った文章そのままです。</p>
+<div class="grid">
+  <div class="card"><h3>納品書（自動生成）</h3><pre id="p-nouhinsho">読み込み中…</pre></div>
+  <div class="card"><h3>点検の結果（みなと会計）</h3><pre id="p-kenpin">読み込み中…</pre></div>
+</div>
+
+<h2>3. 納品前の点検を、ここで試す</h2>
+<p>字幕ファイル（.srt）の中身を貼ると、渡す前に見る所を出します。音量と尺は動画が要るのでここでは見ません。</p>
+<div class="card">
+  <div>
+    <button id="b-kikai" class="sub">機械が作ったままの字幕を入れる</button>
+    <button id="b-naoshi" class="sub">直したあとの字幕を入れる</button>
+    <button id="b-clear" class="sub">消す</button>
+  </div>
+  <textarea id="srt" placeholder="1&#10;00:00:00,000 --> 00:00:01,060&#10;はい こんにちは&#10;&#10;2 …"></textarea>
+  <div>
+    <label>1枚の文字数の上限 <input type="number" id="maxchars" value="20" min="6" max="40"></label>
+    <label>短すぎる札（秒） <input type="number" id="mins" value="0.8" step="0.1"></label>
+    <label>長すぎる札（秒） <input type="number" id="maxs" value="6" step="0.5"></label>
+    <label style="display:block">この案件の言葉（読点で区切る）<br><input type="text" id="kotoba" value="みなと会計,サトウ工務店,インボイス,青色申告,役員報酬" style="width:100%;background:#0b0f18;color:#cfe0ff;border:1px solid #2b3550;border-radius:7px;padding:7px"></label>
+  </div>
+  <button id="b-run">点検する</button>
+  <div id="out"></div>
+</div>
+
+<h2>4. 1本にかかる自分の時間から、月額の下限を出す</h2>
+<p>相場ではありません。自分の時間を下回らないための線です。1本を実際に測って入れてください。</p>
+<div class="card">
+  <label>自分が手を動かした時間（分／1本） <input type="number" id="fun" value="25" min="1"></label>
+  <label>月の本数 <input type="number" id="honsu" value="4" min="1"></label>
+  <label>やり取り・請求（分／1本） <input type="number" id="soto" value="15" min="0"></label>
+  <label>希望の時間あたり（円） <input type="number" id="jikyu" value="3000" min="0" step="100"></label>
+  <button id="b-mitsu">計算する</button>
+  <div id="mitsu"></div>
+  <p class="dim">機械が動いている時間（実測で58〜115秒）は、この計算に入れていません。その間は別のことができるからです。</p>
+</div>
+
+<h2>5. 実測（この見本を作ったときの数字）</h2>
+<table>
+<tr><th>本</th><th>撮ったまま</th><th>納品</th><th>切った所</th><th>字幕</th><th>機械の時間</th><th>人が直した札</th><th>渡せない／人が見る</th></tr>
+<tr><td>みなと会計 1本目</td><td>3分42秒</td><td>2分50秒</td><td>34</td><td>77枚</td><td>115.3秒</td><td class="ng">17枚</td><td>0／3</td></tr>
+<tr><td>みなと会計 2本目</td><td>3分30秒</td><td>2分37秒</td><td>35</td><td>70枚</td><td>94.9秒</td><td class="ng">13枚</td><td>0／1</td></tr>
+<tr><td>あおば整体院 1本目</td><td>3分07秒</td><td>1分56秒</td><td>33</td><td>67枚</td><td>58.5秒</td><td class="ng">11枚</td><td>0／2</td></tr>
+</table>
+<div class="note">2本目でも人の直しは13枚残りました。辞書は「同じ間違い方をしたときだけ」効きます。実測では、社名の間違い方が1本目（佐藤公務店）と2本目（砂糖公務店）で変わりました。
+そのあと辞書を24行まで足して1本目をもう一度通したら、残った直しは2枚でした。</div>
+<p class="dim">機械の時間の内訳（みなと会計2本目）: 無音カット 12.0秒 ／ 字幕づくり 34.0秒 ／ 辞書 0.1秒 ／ 書き出し 18.2秒 ／ 縦型 30.6秒。
+測った機械は Apple M2 Max（メモリ64GB・macOS）。聞き取りは small のモデルをCPUで動かしています。</p>
+
+<h2>6. この見本で確かめていないこと</h2>
+<ul>
+<li>見本の声は macOS の読み上げ音声です。<b>人がカメラの前で話した動画では試していません。</b>雑音のある部屋、声の小さい人、早口の人は結果が変わります。</li>
+<li>Windowsでは動かしていません（入口のファイルは用意してありますが未確認です）。</li>
+<li>実在のクライアントに納品した記録ではありません。<b>受託の実績・金額・継続率の数字はありません。</b></li>
+<li>月額で受けられるかどうかは、この道具では決まりません。ここで示せるのは、渡せる形を毎回同じ手順で作れることまでです。</li>
+</ul>
+
+<footer>
+みなと会計・あおば整体院はどちらも架空です。台本・社名・数字は見本として書いたもので、実在の会社や税務・医療の助言ではありません。<br>
+このページは静的なファイルだけでできています。貼った字幕・入れた数字は、ページの外に送っていません。
+</footer>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
